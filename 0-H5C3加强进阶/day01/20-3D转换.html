@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 3D转换特点：近大远小，物体后面遮挡看不见 */
+        /* X轴：水平向右 往右为正，左为负 */
+        /* Y轴：垂直向下 往下为正，上为负 */
+        /* Z轴：垂直屏幕 往外为正，里为负 */
+        
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: pink;
+            /* transform: translateX(100px) translateY(100px) translateZ(100px); */
+            /* 1.translateZ(100px)后面单位一般跟px  2.往外移动(向眼前移动)100px   3，需要借着透视才能看到效果*/
+            /* 4.有简写方法： */
+            transform: translate3d(100px, 100px, 100px)
+            /* d就是视距，视距就是人眼距离屏幕的距离， */
+            /* z就是Z轴，物体距离屏幕的距离，Z轴越大(正值)，看到的物体就越大 */
+        }
+        /* 透视(也称为视距)：perspective 即：人的眼睛到屏幕的距离   模拟人类的视觉位置 */
+        /* 距离视觉点越近，成像越大，越远成像越小  透视的单位是像素px */
+        
+        body {
+            /* 透视写在被观察物体的父盒子里面 */
+            perspective: 200px;
+            /* perspective:是观察的距离 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

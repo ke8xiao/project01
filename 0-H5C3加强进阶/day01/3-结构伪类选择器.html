@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 把里面的第一个选择出来 */
+        
+        ul li:first-child {
+            color: antiquewhite;
+        }
+        /* nth-child(n) 要第几个,n就是几，直接写即可 */
+        
+        ul li:nth-child(3) {
+            color: blue;
+        }
+        /* 把里面的偶数全部选出来 nth-child(n) */
+        
+        ul li:nth-child(even) {
+            color: red;
+        }
+        /*nth-child(n) n里面是公式的话， n是从0开始的，从0开始计算 但是第0个元素或者是超出的元素会被自动忽略 */
+        /* n+5 是从第5个开始往后选，包括第五个 */
+        /* -n+5 是选择前五个，包括第五个 */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+// 首页的样式less文件
+// @import是把一个样式文件导入到另一个样式文件里
+// link是把一个样式文件引入到html页面
+// 在index.less中导入common.less文件,语法:@import "common"
+@import "common";
+body{
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+}
+@basefont:50;
+.search-content{
+    display: flex;
+    width: 15rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // 页面元素rem计算公式: 页面元素的大小/html文字大小
+    height: (88rem / @basefont);
+    background-color: #ffc001;
+    .classify{
+        width: (44rem / @basefont);
+        height: (70rem / @basefont);
+        margin: (11rem / @basefont) (25rem / @basefont) (7rem / @basefont) (24rem / @basefont);
+        background:url(../images/classify.png)no-repeat;
+        background-size: (44rem / @basefont) (70rem / @basefont);
+    }
+    .search{
+        flex: 1;
+        input{
+            width: 100%;
+            height: (66rem / @basefont);
+            border: 0;
+            outline: none;
+            border-radius: (33rem / @basefont);
+            background-color: #fff2cc;
+            margin-top: (12rem / @basefont);
+        }
+    }
+    .login{
+        width:(75rem / @basefont) ;
+        height:(70rem / @basefont) ;
+        margin: (10rem / @basefont);
+        font-size: (25rem / @basefont);
+        line-height:(70rem / @basefont) ;
+        text-align: center;
+        color: #fff;
+    }
+}

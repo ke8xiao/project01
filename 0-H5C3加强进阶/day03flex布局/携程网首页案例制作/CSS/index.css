@@ -1,0 +1,283 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    font: 12px/1.5 "Microsoft yahei", arial, Simsun, sans-serif;
+    color: #333;
+    background-color: #f6f6f6;
+    /* 防止点击高亮显示 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    /* ul有默认的padding和margin值 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+
+/* 顶部搜索模块 */
+
+.search-index {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 固定的盒子必须有宽度 */
+    width: 100%;
+    /* 固定定位的盒子跟父级没有关系，以屏幕为准，所以需要再次写最大最小宽度 */
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    background-color: #f6f6f6;
+}
+
+.search-index .search {
+    flex: 1;
+    height: 26px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 6px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+    margin: 5px 10px;
+}
+
+.user {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    color: #2eaae0;
+    text-align: center;
+}
+
+.user::before {
+    content: '';
+    width: 23px;
+    height: 23px;
+    display: block;
+    background: url(../images/sprite.png) -59px -194px;
+    background-size: 104px auto;
+    margin: 5px auto -2px;
+}
+
+
+/* 焦点图模块 */
+
+.focus img {
+    width: 100%;
+    margin-top: 44px;
+}
+
+
+/* 局部导航栏 */
+
+.local-nav {
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    margin: 0px 10px;
+    border-radius: 8px;
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.local-nav-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #2eaae0;
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0px 0px;
+    background-size: 32px auto;
+}
+
+.local-nav li a span {
+    color: #222;
+    font-size: 12px;
+}
+
+
+/* 导航栏nav */
+
+nav {
+    margin: 0 4px 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.nav-common {
+    display: flex;
+    height: 88px;
+    /* 背景渐变必须添加浏览器私有前缀 */
+    background-color: pink;
+}
+
+.nav-common:nth-child(1) {
+    background: -webkit-linear-gradient(left, #FA5A55, #FA994d);
+}
+
+.nav-common:nth-child(2) {
+    background: -webkit-linear-gradient(left, blue, skyblue);
+}
+
+.nav-common:nth-child(3) {
+    background: -webkit-linear-gradient(left, green, #47f5cf);
+}
+
+.nav-common .nav-items:nth-child(1) {
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+
+.nav-common:nth-child(2) {
+    margin: 3px 0;
+}
+
+.nav-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items a {
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    /* 文字阴影 */
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-items a:nth-child(2) {
+    border-top: 1px solid #fff;
+}
+
+
+/* -n+2是选择前两个 */
+
+.nav-items:nth-child(-n+2) {
+    border-right: 1px solid #fff;
+}
+
+
+/* subnav-entry模块 */
+
+.subnav-entry {
+    display: flex;
+    /* 记住：给父元素添加换行属性 */
+    flex-wrap: wrap;
+    margin: 8px 3px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.subnav {
+    display: flex;
+    /* flex可以添加百分比布局 */
+    flex: 20%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.subnav div {
+    width: 24px;
+    height: 24px;
+    margin: 4px auto;
+    background: url(../images/subnav-bg.png) no-repeat 0 0;
+    background-size: 24px auto;
+}
+
+
+/* sales模块 */
+
+.sales {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.sales-hd {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+.sales-hd h2::after {
+    content: '';
+    width: 79px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    background: url(../images/hot.png) no-repeat 0 -20px;
+    background-size: 79px auto;
+}
+
+.sales-hd .more {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #f6f6f6;
+    border-radius: 12px;
+    padding: 3px 20px 3px 10px;
+    background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+}
+
+.sales-hd .more::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #f6f6f6;
+    border-right: 2px solid #f6f6f6;
+    transform: rotate(45deg);
+}
+
+.sales-bd .row {
+    display: flex;
+}
+
+.row a {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.row a:nth-child(1) {
+    border-right: 1px solid #ccc;
+}
+
+.row a img {
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <!-- placeholder:提示(文本)符   required:表示其内容不能为空 -->
+        <!-- autofocus:自动聚焦属性，页面加载完成自动聚焦到该表单 -->
+        <!-- 属性:autocomplete  值:off/on 
+             其使用有两个规则：
+            1.需要放在表单内同时加上name属性,       2.同时提交成功
+            用户在字段开始键入时，浏览器鉴于之前键入过的内容，应该显示在字段中填写的选项
+        ，默认已经打开，即：autocomplete="on" 一般情况下使用off  关闭则是：autocomplete="off" 
+     -->
+        <!-- mutiple:多文件提交 -->
+        用户名： <input type="text" placeholder="用户名：" required="required" autofocus="autofocus" autocomplete="on" name="username">
+        <input type="submit" value="提交"> 上传头像：
+        <input type="file" multiple="multiple">
+    </form>
+</body>
+
+</html>

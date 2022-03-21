@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+        /* 属性选择器：权重为10 */
+        /*选择的: 既是button 又有disabled这个属性的元素  */
+        
+        button[disabled] {
+            cursor: default;
+        }
+        /* 类选择器，属性选择器，伪类选择器  权重都为10 */
+        /*以XX开头用^=  可以选择出来   把以icon开头的选择出来 */
+        
+        div[class^=icon] {
+            color: aqua;
+        }
+        /* 以XX结尾用$=  可以选择出来   把以XX结尾的选择出来  */
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button disabled="disabled">按钮</button>
+    <button disabled="disabled">按钮</button>
+    <div class="icon1">图标1</div>
+    <div class="icon2">图标2</div>
+    <div class="icon3">图标3</div>
+</body>
+
+</html>
